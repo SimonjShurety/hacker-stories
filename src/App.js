@@ -1,5 +1,7 @@
 import * as React from "react";
 
+// P58
+
 const App = () => {
   const stories = [
     {
@@ -42,17 +44,15 @@ const App = () => {
   );
 };
 
-const Search = (props) => (
-  <div>
-    <label htmlFor="search">Search: </label>
-    <input
-      id="search"
-      type="text"
-      value={props.search}
-      onChange={props.onSearch}
-    />
-  </div>
-);
+const Search = (props) => {
+  const { search, onSearch } = props;
+  return (
+    <div>
+      <label htmlFor="search">Search: </label>
+      <input id="search" type="text" value={search} onChange={onSearch} />
+    </div>
+  );
+};
 
 const List = (props) => (
   <ul>
