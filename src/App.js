@@ -1,6 +1,6 @@
 import * as React from "react";
 
-// P74
+// P75
 
 const App = () => {
   const stories = [
@@ -26,9 +26,14 @@ const App = () => {
     localStorage.getItem("search") ?? "React"
   );
 
+  React.useEffect(() => {
+    localStorage.setItem("search", searchTerm);
+  }, [searchTerm]);
+
+  console.log(searchTerm);
+
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
-    localStorage.setItem("search", event.target.value);
   };
 
   const searchedStories = stories.filter((story) =>
