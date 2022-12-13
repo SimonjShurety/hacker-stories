@@ -51,8 +51,9 @@ const App = () => {
         label="Search"
         value={searchTerm}
         onInputChange={handleSearch}
-      />
-
+      >
+        search:
+      </InputWithLabel>
       <hr />
 
       <List list={searchedStories} />
