@@ -52,7 +52,7 @@ const App = () => {
         value={searchTerm}
         onInputChange={handleSearch}
       >
-        search:
+        <strong>Search:</strong>
       </InputWithLabel>
       <hr />
 
