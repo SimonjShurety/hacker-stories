@@ -1,6 +1,6 @@
 import * as React from "react";
 
-// P75
+// P90
 
 const useSemiPersistentState = (key, initialState) => {
   const [value, setValue] = React.useState(
@@ -48,11 +48,11 @@ const App = () => {
 
       <InputWithLabel
         id="search"
-        label="Search"
         value={searchTerm}
+        isFocused
         onInputChange={handleSearch}
       >
-        <strong>Search:</strong>
+        <strong>Search: </strong>
       </InputWithLabel>
       <hr />
 
@@ -63,16 +63,22 @@ const App = () => {
 
 const InputWithLabel = ({
   id,
-  label,
   value,
   type = "text",
   onInputChange,
+  isFocused,
   children,
 }) => (
   <>
     <label htmlFor={id}>{children}</label>
     &nbsp;
-    <input id={id} type={type} value={value} onChange={onInputChange} />
+    <input
+      id={id}
+      type={type}
+      value={value}
+      autoFocus={isFocused}
+      onChange={onInputChange}
+    />
   </>
 );
 
