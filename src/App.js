@@ -1,6 +1,6 @@
 import * as React from "react";
 
-// Road To React - P114: Data Fetching with React
+// Road To React - P116: Data Re-Fetching in React
 
 const API_ENDPOINT = "https://hn.algolia.com/api/v1/search?query=";
 
