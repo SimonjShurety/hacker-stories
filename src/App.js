@@ -67,7 +67,6 @@ const App = () => {
 
     axios
       .get(url)
-      .then((response) => response.json())
       .then((result) => {
         dispatchStories({
           type: "STORIES_FETCH_SUCCESS",
