@@ -1,6 +1,6 @@
 import * as React from "react";
 
-// Road To React - P119: Memoized Handler
+// Road To React - P124: Memoized Handler
 
 const API_ENDPOINT = "https://hn.algolia.com/api/v1/search?query=";
 
