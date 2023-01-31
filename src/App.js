@@ -1,4 +1,5 @@
 import * as React from "react";
+import axios from "axios";
 
 // Road To React - P124: Memoized Handler
 
@@ -64,12 +65,13 @@ const App = () => {
   const handleFetchStories = React.useCallback(() => {
     dispatchStories({ type: "STORIES_FETCH_INIT" });
 
-    fetch(url)
+    axios
+      .get(url)
       .then((response) => response.json())
       .then((result) => {
         dispatchStories({
           type: "STORIES_FETCH_SUCCESS",
-          payload: result.hits,
+          payload: result.data.hits,
         });
         setIsLoading(false);
       })
