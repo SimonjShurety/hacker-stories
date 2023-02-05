@@ -2,6 +2,7 @@ import * as React from "react";
 import axios from "axios";
 
 import "./App.css";
+import { ReactComponent as Check } from "./check.svg";
 
 // Road To React - P141: CSS in React
 
@@ -198,7 +199,7 @@ const Item = ({ item, onRemoveItem }) => (
         onClick={() => onRemoveItem(item)}
         className="button button_small"
       >
-        Dismiss
+        <Check height="18px" width="18px" />
       </button>
     </span>
   </li>
